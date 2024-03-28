@@ -15,7 +15,7 @@ import os
 from dotenv import load_dotenv
 
 CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'http://localhost:5173',
-                        'http://localhost:8000', 'https://www.marina-backender.org.kg']
+                        'http://localhost:8000', 'https://www.nurberdi.online']
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
