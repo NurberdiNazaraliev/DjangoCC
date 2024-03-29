@@ -17,7 +17,8 @@ from dotenv import load_dotenv
 CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'http://localhost:5173',
                         'http://localhost:8000', 'https://www.nurberdi.online']
 
-ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = ['yourdomain.com', 'www.yourdomain.com', 'www.nurberdi.online', 'nurberdi.online']
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
