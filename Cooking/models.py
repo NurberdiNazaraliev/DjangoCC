@@ -1,3 +1,4 @@
+from django.core.validators import MinValueValidator, MaxValueValidator
 from django.db import models
 from rest_framework.authtoken.admin import User
 
@@ -15,7 +16,15 @@ class Recipe(models.Model):
     cook_time = models.CharField(max_length=20)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     image = models.ImageField(upload_to='images/', null=True, blank=True)
-    difficulty = models.IntegerField(range(1, 5))
+    DIFFICULTY_CHOICES = [
+        (1, 'Easy'),
+        (2, 'Moderate'),
+        (3, 'Medium'),
+        (4, 'Difficult'),
+        (5, 'Very Difficult'),
+    ]
+    difficulty = models.IntegerField(choices=DIFFICULTY_CHOICES, verbose_name="Difficulty",
+                                     validators=[MinValueValidator(1), MaxValueValidator(5)])
     description = models.TextField(max_length=300)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     def __str__(self):
