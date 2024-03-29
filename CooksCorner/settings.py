@@ -17,7 +17,6 @@ from dotenv import load_dotenv
 CSRF_TRUSTED_ORIGINS = ['http://localhost:3000', 'http://localhost:5173',
                         'http://localhost:8000', 'https://www.nurberdi.online']
 
-ALLOWED_HOSTS = ['yourdomain.com', 'www.yourdomain.com', 'www.nurberdi.online', 'nurberdi.online']
 
 
 
@@ -37,7 +36,7 @@ SECRET_KEY = 'django-insecure-)^)+^iz8a25ijs$34k4q&+hl8%7isd0sil9+#!hts1w^!g!+tj
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['yourdomain.com', 'www.yourdomain.com', 'www.nurberdi.online', 'nurberdi.online']
 load_dotenv()
 
 # Application definition
